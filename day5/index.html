@@ -3,13 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=S, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <form id="survey-form">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">We value your feedback! Please fill out this form to help us improve.</p>
 
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" min="10" max="100" placeholder="Enter your age" required>
+
+        <label for="dropdown">What is your favorite programming language?</label>
+        <select id="dropdown" name="language" required>
+            <option value="">--Select an option--</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+
+        <p>How would you rate your coding skills?</p>
+        <label><input type="radio" name="skill" value="beginner"> Beginner</label><br>
+        <label><input type="radio" name="skill" value="intermediate"> Intermediate</label><br>
+        <label><input type="radio" name="skill" value="advanced"> Advanced</label>
+
+        <p>Which tools do you use? (Select all that apply)</p>
+        <label><input type="checkbox" name="tools" value="github"> GitHub</label><br>
+        <label><input type="checkbox" name="tools" value="vscode"> VS Code</label><br>
+        <label><input type="checkbox" name="tools" value="terminal"> Terminal</label>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
